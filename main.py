@@ -2,14 +2,14 @@
 # user_name, user_surname, user_age, user_occupation = person_data
 # print user_age
 
-def countxz():
-    f = open(r'c:/file.txt')
-    text = f.readlines()
-    print type(text), 'file context:  ', text
-    for i in text:
-        print i
-        if i == 'login: fdsfsdf\n':
-            print 'wow'
+# def countxz():
+#     f = open(r'c:/file.txt')
+#     text = f.readlines()
+#     print type(text), 'file context:  ', text
+#     for i in text:
+#         print i
+#         if i == 'login: fdsfsdf\n':
+#             print 'wow'
 
     # value1, value2, value3, value4 = text
     # print "VALUES:", value1, value2, value3, value4
@@ -19,7 +19,7 @@ def countxz():
     # print true_login,'is',  login_value
     # return 1
 
-print countxz()
+# print countxz()
 
 
 
@@ -198,3 +198,34 @@ import os
 # seq2 = [4, 5, 6]
 # for i, y in map(None, seq1, seq2):
 #     print i, y
+
+
+class Tree(object):
+    def __init__(self, kind, height):
+        self.kind = kind
+        self.age = 0
+        self.height = height
+
+    def info(self):
+        print ("{} years old {}. {} meters high.".format(self.age, self.kind, self.height))
+
+
+    def grow(self):
+        self.age += 1
+        self.height += 0.5
+
+
+class FruitTree(Tree):
+    # def __init__(self, kind, height):
+    #     self.kind = kind
+    #     self.age = 0
+    #     self.height = height
+
+    def give_fruits(self):
+        print ("Collected 20kg of {}s".format(self.kind))
+
+tree_2 = FruitTree("apple", 0.7)
+tree_2.info()
+tree_2.grow()
+tree_2.give_fruits()
+tree_1.give_fruits()

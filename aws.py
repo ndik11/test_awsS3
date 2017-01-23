@@ -27,9 +27,13 @@ def upload_file(file_name):
     print '==================='
     print 'Checking if file sent'
     sent_status = 200
-    dict1 = dict(file_sent_status.get('ResponseMetadata'))
-    if dict1.get('HTTPStatusCode') == sent_status:
+    dict_responce = dict(file_sent_status.get('ResponseMetadata'))
+    for key, value in dict_responce.items():
+        print key, value
+    if dict_responce.get('HTTPStatusCode') == sent_status:
         print 'Sent: Ok'
+    else:
+        print 'Not sent'
 
 
 
