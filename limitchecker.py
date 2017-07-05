@@ -11,7 +11,7 @@ print('Loading function')
 #email to send from
 email_from = os.environ['email_from']
 #email send to
-email_to= os.environ['email_to']
+email_to = os.environ['email_to']
 #arn to send from
 email_from_arn = os.environ['email_from_arn']
 #list of emails
@@ -94,7 +94,7 @@ def case_creation(warning_message, critical_message):
     return case_id
 
 
-# 'Will.Wightman@entrustdatacard.com', 'EESDevOps@entrustdatacard.com', 'marksomm@amazon.com'
+
 
 # email!!!!!!!!!!!!!!!!!!!!!!!!!!
 def email_send(case_id, warning_message, critical_message):
